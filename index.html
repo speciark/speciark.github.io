@@ -6,26 +6,26 @@
 		<script>
 			const urlParams = new URLSearchParams(window.location.search);
 
-			consol.log(window.location.search);
-			consol.log(urlParams);
+			console.log(window.location.search);
+			console.log(urlParams);
 			
 			const keys = urlParams.keys();
 
-			consol.log(keys);
+			console.log(keys);
 			
 			var jsondb = {};
 			
 			for(const key of keys)  {
-				consol.log(key);
-				consol.log(urlParams.get(key));
+				console.log(key);
+				console.log(urlParams.get(key));
 				jsondb[key] = urlParams.get(key);
-				consol.log(jsondb);
+				console.log(jsondb);
 			}
 
-			consol.log(jsondb)
+			console.log(jsondb)
 			
 			let target = document.getElementById("jsondb")
-			consol.log(target)
+			console.log(target)
 			target.innerHTML = JSON.stringify(jsondb);
 		</script>
 	</head>

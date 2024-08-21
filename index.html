@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset = "utf-8" />
+		<title> URLDB </title>
+		<script>
+			const urlParams = new URLSearchParams(window.location.search);
+			
+			const keys = urlParams.keys();
+			
+			var jsondb = {};
+			
+			for(const key of keys)  {
+				jsondb[key] = urlParams.get(key);
+			}
+			
+			let target = document.getElementById("jsondb")
+			target.innerHTML = JSON.stringify(jsondb);
+		</script>
+	</head>
+	<body>
+		<p> [URL DB : 뭉탱이로 왔다가 유링게슝] </p><br>
+		<div id="jsondb"></div><br>
+		<p> [URL DB : 뭉탱이로 왔다가 유링게슝] </p><br>
+		<p> don't worry that horrful prase isn't chinese LOL </p><br>
+	</body>
+</html>

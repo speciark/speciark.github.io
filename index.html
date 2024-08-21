@@ -11,27 +11,16 @@
 		<p> don't worry that horrful prase isn't chinese LOL </p><br>
 		<script>
 			const urlParams = new URLSearchParams(window.location.search);
-
-			console.log(window.location.search);
-			console.log(urlParams);
 			
 			const keys = urlParams.keys();
-
-			console.log(keys);
 			
 			var jsondb = {};
 			
 			for(const key of keys)  {
-				console.log(key);
-				console.log(urlParams.get(key));
 				jsondb[key] = urlParams.get(key);
-				console.log(jsondb);
 			}
-
-			console.log(jsondb)
 			
 			let target = document.getElementById("jsondb")
-			console.log(target)
 			target.innerHTML = JSON.stringify(jsondb);
 		</script>
 	</body>

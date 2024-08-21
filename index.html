@@ -5,16 +5,27 @@
 		<title> URLDB </title>
 		<script>
 			const urlParams = new URLSearchParams(window.location.search);
+
+			consol.log(window.location.search);
+			consol.log(urlParams);
 			
 			const keys = urlParams.keys();
+
+			consol.log(keys);
 			
 			var jsondb = {};
 			
 			for(const key of keys)  {
+				consol.log(key);
+				consol.log(urlParams.get(key));
 				jsondb[key] = urlParams.get(key);
+				consol.log(jsondb);
 			}
+
+			consol.log(jsondb)
 			
 			let target = document.getElementById("jsondb")
+			consol.log(target)
 			target.innerHTML = JSON.stringify(jsondb);
 		</script>
 	</head>

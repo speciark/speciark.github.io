@@ -1,14 +1,11 @@
-const reponame = "urldb";
-var scriptUrl = document.currentScript.src;
-const urn = scriptUrl.substring(0, scriptUrl.lastIndexOf('/'));
-const path = reponame;
+const urn = document.currentScript.src;
 
 const seps = "\n\t<p> [URL DB : 뭉탱이로 왔다가 유링게슝] </p><br>\n\t"
 var firstihint = '<div id="jsondb">'.length;
 var lastihint = "</div><br>".length;
 const firsti = firstihint--;
 const lasti = -lastihint;
-const url = "https://" + urn + '/' + path + '?';
+const url = "https://" + urn + '?';
 
 function Loads(txt){
 	var text = txt;
